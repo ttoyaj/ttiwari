@@ -1,0 +1,26 @@
+Pascal's Triangle with for loops
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world! \n";
+
+int n = 6;
+      
+for (int line = 1; line <= n; line++)
+{
+    int C = 1; // used to represent C(line, i)
+    for (int i = 1; i <= line; i++) 
+    {
+          
+        // The first value in a line is always 1
+        cout<< C<<" "; 
+        C = C * (line - i) / i; 
+    }
+    cout<<"\n";
+}
+
+    return 0;
+}
