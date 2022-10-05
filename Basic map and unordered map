@@ -1,0 +1,33 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <unordered_map>
+#include <map>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world! \n";
+    
+    unordered_map<string, int> umap ;
+    
+    umap["toyaj"] = 123345 ;
+    umap["adithi"] = 2345 ;
+    umap.insert(make_pair("prince", 73737)) ;
+    
+    for(auto it : umap)
+    {
+        cout << it.first << it.second << "\n"  ;
+    }
+    cout << "NOW THE MAP \n" ;
+    map<string, int> map1 ;
+    map1["toyaj"] = 123345 ;
+    map1["adithi"] = 2345 ;
+    map1.insert(make_pair("prince", 73737)) ;
+    
+    for(auto it : map1)
+    {
+        cout << it.first  << it.second  << "\n";
+    }
+
+    return 0;
+}
