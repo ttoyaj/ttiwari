@@ -1,0 +1,26 @@
+/**
+ * @input A : Integer array
+ * @input n1 : Integer array's ( A ) length
+ * 
+ * @Output Integer
+ */
+int solve(int* A, int n1) {
+    
+    int i =0 ;
+    int iMin = i ;
+    int iMax = i ;
+    for(i ; i < n1 ; i++)
+    {
+        if(A[i] < A[iMin] ) 
+        {
+        iMin = i ;
+        }
+        if(A[i] > A[iMax])
+        {
+            iMax = i ;
+        }
+        
+    }
+   // std::cout << A[iMin] << "and " << A[iMax] ;
+    return (A[iMin]+ A[iMax]) ;
+}
