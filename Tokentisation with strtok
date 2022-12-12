@@ -1,0 +1,23 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+#include <cstring>
+#include <sstream>
+//#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+char test[1000] ;
+cin.getline(test,1000) ;
+
+//cout << strtok(test, " " ) << " ";
+char *token = strtok(test, " " ) ; // this cant be test.strtok beacuse test is not a object of string class hence we pass as a argument
+while(token!= NULL)
+{
+    cout << token << endl;
+token = strtok(NULL, " " ) ;
+}
+
+return 0;
+}
