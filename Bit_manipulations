@@ -3,6 +3,7 @@
 using namespace std ;
 void checkPo2(int a)
 {
+// Intresting property if n is power of two doing an and of n and n-1 will always give 0
     cout<< "CHECK FOR POWER OF 2 \n " ;
     (a&(a-1)) ? cout << "Not a power of 2 \n"  :cout << "YES power of 2 \n"  ;
 }
