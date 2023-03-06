@@ -1,0 +1,38 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world! \n";
+    //0 1 2 3 4 5 6 7 9 10 11 12 18 
+    vector<int> v1 {1,9,3,0,18,5,2,4,10,7,12,6,11} ;
+    sort(v1.begin(),v1.end()) ;
+    
+    int count = 1 ;
+    int max = 0 ;
+    //for(int i : v1)
+    for(int i=0; i < v1.size(); i++)
+    {
+        cout << "FOR I " <<  i <<  " v1[i] " << v1[i] << " and " ;
+        cout << "v1 [i+1] " <<  v1 [i+1] << " \n" ;
+        if(v1[i] +1 == v1[i+1])
+        {
+            count ++ ;
+            cout << "count is " << count << "\n" ;
+            if(count > max)
+            {
+                max = count ;
+            }
+        }
+        else
+        {
+            count = 0 ;
+             cout << "count is " << count << "\n" ;
+        }
+    }
+  cout << "max value is " << max ;
+    return 0;
+}
