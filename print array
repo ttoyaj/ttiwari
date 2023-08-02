@@ -1,0 +1,22 @@
+// Online C++ compiler to run C++ program online
+//basic code to print all elements of array and bsic concept learned:  passing arry 
+#include <iostream>
+using namespace std ;
+
+void display (int arr[] , int len)
+{
+    cout << "elemenntes are \n" ;
+    for(int i = 0 ; i <len ; i++)
+    {
+        cout << arr[i] << " " ;
+    }
+}
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world!";
+    
+    int arr[] = {10,20,30} ;
+    display(arr , 3) ;
+
+    return 0;
+} 
