@@ -1,0 +1,63 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <string>
+#include <stack>
+using namespace std;
+
+bool isBalanced(string s)
+{
+    stack<char> ss ;
+    for(auto ch: s)
+    {
+        switch (ch)
+        {
+            case '{':
+            case '(':
+            case '[':
+               ss.push(ch) ;
+               break;
+            case '}':
+               if((!ss.empty()) && (ss.top() == '{'))
+               {
+                   ss.pop();
+               }
+               break;
+           case ']':
+               if((!ss.empty()) && (ss.top() == '['))
+               {
+                   ss.pop();
+               }
+               break;
+           case ')':
+               if((!ss.empty()) && (ss.top() == '('))
+               {
+                   ss.pop();
+               }
+               break;
+           default:
+               continue;
+        }
+    }
+    if(ss.empty())
+    {
+        return true;
+    }
+    return false;
+}
+
+
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world! \n";
+    string s = "{(a+b) +c + [[d*e]}"  ;
+    
+    if(isBalanced(s))
+    {
+        std::cout << "yes \n" ;
+    }
+else
+{
+    std::cout << "no" ;
+}
+    return 0;
+}

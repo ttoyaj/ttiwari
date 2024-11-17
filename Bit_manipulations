@@ -1,0 +1,55 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std ;
+void checkPo2(int a)
+{
+// Intresting property if n is power of two doing an and of n and n-1 will always give 0
+    cout<< "CHECK FOR POWER OF 2 \n " ;
+    (a&(a-1)) ? cout << "Not a power of 2 \n"  :cout << "YES power of 2 \n"  ;
+}
+
+void checkOddEven(int a)
+{
+    cout << "CHECK ODD OR EVEN \n";
+    (a&1)?cout << "ODD \n" : cout << "EVEN \n" ;
+}
+
+void getBit(int a)
+{
+    cout << "ENTER the bit to get \n";
+    int b ;
+    cin >> b ;
+    int mask = 1 << b ;
+    (a&mask)?cout<< "bit is 1" :  cout << "bit is 0 ";
+}
+
+void setBit(int &a)
+{
+    cout << "\n enter bit to set \n " ;
+    int b ;
+    cin >> b ;
+    int mask = 1 << b ;
+    cout << "new number afetr setting bit is " << (a|mask) ;
+}
+
+void clearBit(int &a)
+{
+    cout << "\n enter the bit to be cleared \n" ;
+    int b ;
+    cin >> b ;
+    int mask = ~(1<<b) ;
+    cout << "number after clearing bit is " << (a&mask) ;
+}
+
+int main() {
+    int a ;
+    std::cout << "Enter number  \n" ;
+    std:: cin >> a ;
+    checkPo2(a);
+    checkOddEven(a) ;
+    getBit(a) ;
+    setBit(a) ;
+    clearBit(a);
+
+    return 0;
+}
